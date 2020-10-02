@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation-parent">
+        <div><a href="about.html">About</a></div>
+        <div><a href="workex.html">Work Ex</a></div>
+        <div><a href="skills.html">Skills</a></div>
+        <div><a href="education.html">Education</a></div>
+    </div>
+
+    <div class="hero-section">
+        <div class="img-container">
+            <img src="./home2.png" alt="person" style=" height: 100%; width: 100%;"/>
+        </div>
+
+        <div class="name">
+            <h1 class="first">Varun</h1>
+            <h1 class="last">Goel</h1>
+        </div>
+    </div>
+    
+    <div class="hire" onclick=" showpopup()" >HIRE ME</div>
+    <div class="popup" style="display:none">
+        <form>
+        <input type="email" id=mail placeholder="Email Id">
+        <input type="text" id=msg placeholder="Message">
+        <button onclick="return hidepopup()">Submit</button>
+        </form>
+    </div>
+
+</body>
+<script>
+    var popup=document.querySelector(".popup");
+    
+    function showpopup(){
+        popup.style.display='block';
+    }
+
+    function hidepopup(){
+        popup.style.display='none';
+        alert("Form Submitted")
+        document.querySelector('#mail').value="";
+        document.querySelector('#msg').value="";
+        return false;
+    }
+    
+
+</script>
+</html>
